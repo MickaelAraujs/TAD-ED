@@ -21,11 +21,24 @@ void addAluno(char nomeAl[50],char matriculaAl[10],Aluno *novoAl) {
 	strcpy(novoAl->nome,nomeAl);
 	strcpy(novoAl->matricula,matriculaAl);
 	
-	printf("\nAluno inserido com sucesso!");
+	printf("\nAluno inserido com sucesso!\n\n");
 }
 
 void imprimeAluno(Aluno *novoAl) {
-	printf("NOME DO ALUNO: %s",novoAl->nome);
+	printf("\n\nNOME DO ALUNO: %s\n\n",novoAl->nome);
 	printf("\n\n");
-	printf("MATRICULA DO ALUNO: %s",novoAl->matricula);
+	printf("\n\nMATRICULA DO ALUNO: %s\n\n",novoAl->matricula);
 } 
+
+int comparaAluno(Aluno *al1,Aluno *al2) {
+	int cmp = strcmp(al1->nome,al2->nome);
+	
+	if(cmp == 0) {
+		return 0;
+	}
+	else if(cmp > 0) {
+		return 1;
+	}
+	
+	return -1;
+}

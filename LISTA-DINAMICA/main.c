@@ -15,7 +15,7 @@ main() {
 		printf("informe o nome do aluno\n");
 		fflush(stdin);
 		gets(nomeAl);
-		printf("informe a matricula do aluno %s\n",nomeAl);
+		printf("\ninforme a matricula do aluno %s\n",nomeAl);
 		fflush(stdin);
 		gets(matriculaAl);
 		
