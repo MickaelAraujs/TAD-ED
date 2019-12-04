@@ -30,12 +30,18 @@ void ordenarLista(Lista *li) {
 		int comp = comparaAluno(aux->novoAluno,menor->novoAluno);
 		
 		if(comp == -1) {
-			menor = aux;
-		// aqui ta dando problema, corrigir...	
-			Nodo *aux2 = menor->proximo;
-			menor->proximo = li->inicio;
-			li->inicio->proximo = aux2;
-			li->inicio = menor;
+			Nodo *aux2 = li->inicio;
+			while(aux2->proximo!=aux) {
+				aux2 = aux2->proximo;
+			}
+			aux2->proximo = aux->proximo;
+			aux->proximo = li->inicio;
+			li->inicio = aux;
+			aux = aux->proximo;
+			menor = li->inicio;
+			aux2 = li->inicio;	
+		}
+		else if(comp == 1) {
 			menor = menor->proximo;
 		}
 	} while(aux->proximo!=NULL);

@@ -25,9 +25,9 @@ void addAluno(char nomeAl[50],char matriculaAl[10],Aluno *novoAl) {
 }
 
 void imprimeAluno(Aluno *novoAl) {
-	printf("\n\nNOME DO ALUNO: %s\n\n",novoAl->nome);
+	printf("\n\nNOME DO ALUNO: %s\n",novoAl->nome);
 	printf("\n\n");
-	printf("\n\nMATRICULA DO ALUNO: %s\n\n",novoAl->matricula);
+	printf("MATRICULA DO ALUNO: %s\n\n",novoAl->matricula);
 } 
 
 int comparaAluno(Aluno *al1,Aluno *al2) {
