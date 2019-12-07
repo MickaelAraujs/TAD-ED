@@ -12,3 +12,5 @@ void addAluno(char nomeAl[50],char matriculaAl[10],Aluno *novoAl);
 void imprimeAluno(Aluno *novoAl);
 
 int comparaAluno(Aluno *al1,Aluno *al2);
+
+void liberarAluno(Aluno *al, char nome[50]);
