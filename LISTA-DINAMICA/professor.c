@@ -27,14 +27,14 @@ void addProf(char nomeProf[50],char matriculaProf[10],float salarioProf,Prof *no
 }
 
 void imprimeProf(Prof *novoProf) {
-	printf("=========================================");
+	printf("=========================================\n\n");
 	printf("NOME DO PROFESSOR: %s",novoProf->nome);
 	printf("\n\n");
 	printf("MATRICULA DO PROFESSOR: %s",novoProf->matricula);
 	printf("\n\n");
 	printf("SALARIO DO PROFESSOR: %.2f",novoProf->salario);
 	printf("\n\n");
-	printf("=========================================");
+	printf("=========================================\n\n");
 }
 
 int comparaProf(Prof *prof1,Prof *prof2) {
@@ -59,4 +59,14 @@ void liberarProf(Prof *prof, char nome[50]) {
 	else {
 		printf("\n professor nao encontrado! \n");
 	}
+}
+
+int buscarProf(Prof *prof, char nome[50]) {
+	int cmp = strcmp(prof->nome,nome);
+	
+	if(cmp == 0) {
+		return 1;
+	}
+	
+	return -1;
 }

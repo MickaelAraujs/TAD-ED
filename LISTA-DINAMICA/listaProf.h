@@ -13,3 +13,5 @@ void addProfLista(ListaProf *list,Prof *prof);
 void imprimeListaProf(ListaProf *list);
 
 void liberaListaProf(ListaProf *list);
+
+void buscarProfLista(ListaProf *list, char nome[50]);

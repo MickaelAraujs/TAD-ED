@@ -18,3 +18,5 @@ void imprimeProf(Prof *novoProf);
 int comparaProf(Prof *prof1,Prof *prof2);
 
 void liberarProf(Prof *prof, char nome[50]);
+
+int buscarProf(Prof *prof, char nome[50]);

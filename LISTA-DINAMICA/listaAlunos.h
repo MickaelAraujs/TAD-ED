@@ -15,3 +15,5 @@ void addAlunoLista(ListaAlunos *li,Aluno *al);
 void imprimeListaAlunos(ListaAlunos *li);
 
 void liberaListaAlunos(ListaAlunos *li);
+
+void buscarAlunoLista(ListaAlunos *li, char nome[50]);

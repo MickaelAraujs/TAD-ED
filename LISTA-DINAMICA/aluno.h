@@ -14,3 +14,5 @@ void imprimeAluno(Aluno *novoAl);
 int comparaAluno(Aluno *al1,Aluno *al2);
 
 void liberarAluno(Aluno *al, char nome[50]);
+
+int buscar(Aluno *al, char nome[50]);

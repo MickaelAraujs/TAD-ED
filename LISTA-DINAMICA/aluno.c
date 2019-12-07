@@ -25,12 +25,12 @@ void addAluno(char nomeAl[50],char matriculaAl[10],Aluno *novoAl) {
 }
 
 void imprimeAluno(Aluno *novoAl) {
-	printf("========================================");
+	printf("========================================\n\n");
 	printf("NOME DO ALUNO: %s",novoAl->nome);
 	printf("\n\n");
 	printf("MATRICULA DO ALUNO: %s",novoAl->matricula);
 	printf("\n\n");
-	printf("========================================");
+	printf("========================================\n\n");
 } 
 
 int comparaAluno(Aluno *al1,Aluno *al2) {
@@ -55,4 +55,14 @@ void liberarAluno(Aluno *al, char nome[50]) {
 	else {
 		printf("\nAluno nao encontrado!\n");
 	}
+}
+
+int buscar(Aluno *al, char nome[50]) {
+	int cmp = strcmp(al->nome,nome);
+	
+	if(cmp == 0) {
+		return 1;
+	}
+	
+	return -1;
 }

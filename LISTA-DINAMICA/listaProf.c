@@ -91,3 +91,19 @@ void liberaListaProf(ListaProf *list) {
 		printf("\n Lista excluida com sucesso! \n");
 	}
 }
+
+void buscarProfLista(ListaProf *list, char nome[50]) {
+	Element *aux = list->inicio;
+	
+	while(aux!=NULL) {
+		int resultado = buscarProf(aux->novoProf,nome);
+		
+		if(resultado == 1) {
+			imprimeProf(aux->novoProf);
+			break;
+		}
+		else {
+			aux = aux->prox;
+		}
+	}
+}

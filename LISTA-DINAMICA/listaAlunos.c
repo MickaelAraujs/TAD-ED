@@ -93,3 +93,19 @@ void liberaListaAlunos(ListaAlunos *li) {
 		printf("\n Lista excluida com sucesso! \n");
 	}
 }
+
+void buscarAlunoLista(ListaAlunos *li, char nome[50]) {
+	Nodo *aux = li->inicio;
+	
+	while(aux!=NULL) {
+		int resultado = buscar(aux->novoAluno, nome);
+		
+		if(resultado == 1) {
+			imprimeAluno(aux->novoAluno);
+			break;
+		}
+		else {
+			aux = aux->proximo;
+		}
+	}
+}
